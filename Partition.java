@@ -1,26 +1,27 @@
-package linkedListProblems;
+ package linkedListProblems;
 
 public class Partition {
 
 	public static void main(String[] args) {
 
-		LinkedListNode a1 = new LinkedListNode(4, null);
+//		LinkedListNode a1 = new LinkedListNode(4, null);
+		LinkedListNode a1 = new LinkedListNode(1, null);
 		LinkedListNode a2 = new LinkedListNode(1, null);
-		LinkedListNode a3 = new LinkedListNode(3, null);
-		LinkedListNode a4 = new LinkedListNode(2, null);
-		LinkedListNode a5 = new LinkedListNode(5, null);
-		LinkedListNode a6 = new LinkedListNode(2, null);
+//		LinkedListNode a3 = new LinkedListNode(3, null);
+//		LinkedListNode a4 = new LinkedListNode(2, null);
+//		LinkedListNode a5 = new LinkedListNode(5, null);
+//		LinkedListNode a6 = new LinkedListNode(2, null);
 
 		a1.next = a2;
-		a2.next = a3;
-		a3.next = a4;
-		a4.next = a5;
-		a5.next = a6;
+//		a2.next = a3;
+//		a3.next = a4;
+//		a4.next = a5;
+//		a5.next = a6;
 		
 		LinkedListNode head = a1;
 		
 		print(head);
-		head = partion(head,3); 
+		head = partion(head,0); 
 		print(head);
 	}
 
@@ -51,7 +52,7 @@ public class Partition {
 				prev = cur;
 				cur = cur.next;
 			}
-		}
+		 }
 		cur1.next = null;
 
 		prev.next = head1.next;

@@ -8,12 +8,11 @@ public class BST2DLL {
 	static TreeNode head;
 	public static void main(String[] args) {
 		
-		TreeNode root = new TreeNode(25);
-	        root.Left = new TreeNode(12);
-	        root.Right = new TreeNode(36);
-	        root.Left.Left = new TreeNode(10);
-	        root.Left.Right = new TreeNode(15);
-	        root.Right.Left = new TreeNode(30);
+		TreeNode root = new TreeNode(4);
+	        root.left = new TreeNode(2);
+	        root.right = new TreeNode(5);
+	        root.left.left = new TreeNode(1);
+	        root.left.right = new TreeNode(3);
 	  
 	        // convert to DLL
 	        BinaryTree2DoubleLinkedList(root);
@@ -27,8 +26,8 @@ public class BST2DLL {
     {
         while (node != null)
         {
-            System.out.print(node.data + " ");
-            node = node.Right;
+            System.out.print(node.val + " ");
+            node = node.right;
         }
     }
     
@@ -39,20 +38,20 @@ public class BST2DLL {
             return;
   
         // Recursively convert left subtree
-        BinaryTree2DoubleLinkedList(root.Left);
+        BinaryTree2DoubleLinkedList(root.left);
   
         // Now convert this node
         if (prev == null)
             head = root;
         else
         {
-            root.Left = prev;
-            prev.Right = root;
+            root.left = prev;
+            prev.right = root;
         }
         prev = root;
   
         // Finally convert right subtree
-        BinaryTree2DoubleLinkedList(root.Right);
+        BinaryTree2DoubleLinkedList(root.right);
     }
   
 }

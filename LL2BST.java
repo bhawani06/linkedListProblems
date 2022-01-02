@@ -37,13 +37,13 @@ public class LL2BST {
 
 		TreeNode left = llTBst(head, start, m-1);
 		TreeNode root = new TreeNode(head.value);
-		root.Left = left;
+		root.left = left;
 		if(head.next !=null)
 		{
 			head.value= head.next.value;
 			head.next = head.next.next;
 		}
-		root.Right= llTBst(head, m+1, end);
+		root.right= llTBst(head, m+1, end);
 		return root;
 		
 	}
@@ -57,14 +57,14 @@ public class LL2BST {
 		while(! q.isEmpty())
 		{
 			TreeNode tmp= q.remove();
-			System.out.println(tmp.data);
-			if(tmp.Left != null)
+			System.out.println(tmp.val);
+			if(tmp.left != null)
 			{
-				q.add(tmp.Left);
+				q.add(tmp.left);
 			}
-			if(tmp.Right!=null)
+			if(tmp.right!=null)
 			{
-				q.add(tmp.Right);
+				q.add(tmp.right);
 			}
 		}
 	}

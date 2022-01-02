@@ -1,5 +1,6 @@
 package linkedListProblems;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 
 public class CloneRandomPointer2 {
@@ -34,7 +35,7 @@ public class CloneRandomPointer2 {
 	private static LinkedListNode clone(LinkedListNode head) {
 		// TODO Auto-generated method stub
 		LinkedListNode cur = head,head1,cur1;
-		
+		BigInteger a;
 		while(cur!=null)
 		{
 			LinkedListNode temp = new LinkedListNode(cur.value, null);
